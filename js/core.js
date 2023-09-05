@@ -4,21 +4,26 @@ import {
   insertionSort,
   mergeSort,
   quickSort,
-  radixLSDSort,
   selectionSort,
 } from "./algorithms.js";
+
+// declaring the variables
 
 var currentAlgorithm = "Bubble sort",
   currentArraySize = 30,
   currentData = [],
   metaFile = "../assets/meta.json",
   meta;
+
+// declaring the current state
 var state = {
   running: false,
   pause: false,
   delay: 10,
   opt: 0,
 };
+
+// declaring the imported algorithms
 var algorithms = {
   "Bubble sort": bubbleSort,
   "Insertion sort": insertionSort,
@@ -26,7 +31,6 @@ var algorithms = {
   "Merge sort": mergeSort,
   "Quick sort": quickSort,
   "Heap sort": heapSort,
-  "Radix LSD sort": radixLSDSort,
 };
 
 async function loadJson(url) {
