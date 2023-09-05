@@ -33,6 +33,7 @@ var algorithms = {
   "Heap sort": heapSort,
 };
 
+// loading the json from a url
 async function loadJson(url) {
   const r = await fetch(url);
   return r.json();
